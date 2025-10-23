@@ -1,19 +1,102 @@
-Create automations (microservices) in Jupyter notebook and deploy them with the click of a button
+# BitSwan Platform
 
-Setup your environment using the [Bitswan automation server CLI](https://github.com/bitswan-space/bitswan-automation-server)
+BitSwan is a platform for building automations and microservices directly in Jupyter Notebooks, and deploying them with a single click.  
 
-<img width="9300" height="3953" alt="image" src="https://github.com/user-attachments/assets/18b18729-8410-456c-be0a-952dafa796cb" />
+## Key Use Cases
+- **Automation of processes**  
+- **Batch / real-time processing of data**  
+- **Simple web applications**  
+- **REST APIs**  
 
-Repositories:
 
-- bitswan (open source BSD)
-  - Contains the bitswan python library: what you get when you import bitswan in your jupyter notebook
-  - Contains the bitswan compiler: Which compiles jupyter notebooks into microservices
-- bitswan-automation-server (open source BSD)
-  Orchestration system for bitswan workspaces and gitops runspaces
-- bitswan-gitops (open source BSD)
-   Orchestration system for bitswan microservices that operates within workspaces and runspaces
-- bitswan-editor (%95 open source)
-   Specialized instance of visual studio codeserver designed to help you build bitswan microservices in jupyter
-- automation-operations-center (proprietary)
-   Proprietary monitoring and management system for bitswan deployments
+## Automation Server
+
+The **Automation Server** is the runtime environment where BitSwan automations and microservices are deployed and executed.  
+
+- Runs on a **Linux machine** with Docker or inside a **Kubernetes namespace**  
+- Can host **multiple workspaces**, providing isolation between projects and teams  
+- Operates in two modes:  
+  - **Standalone** – fully functional for development and deployment of automations  
+  - **Connected to AOC** – integrates with the Automation Operation Center (AOC) for advanced monitoring, process specification, and management features  
+
+Even when not connected to the AOC, the Automation Server runs autonomously at 100%.  
+
+
+## Workspace / Runspace
+
+A **Workspace** (or Runspace) is the logical separation unit within BitSwan, designed to isolate automations, users, and resources.  
+
+Each workspace includes:  
+- **GitOps** – for managing running automations:  
+  - Deploy, restart, pause, or delete automations  
+  - Access and monitor logs  
+- **BitSwan Editor** – a customized VS Code server with the BitSwan extension:  
+  - Develop and test automations/microservices using the BitSwan Python library and Jupyter  
+  - Deploy automations with a single click  
+
+### User Management
+- Workspaces are the central building block of user access management  
+- Users gain access either directly or through groups  
+- Workspace membership determines visibility, management, and development permissions for automations
+
+## Automation Operation Center (AOC)
+
+The **AOC** is a modern web application that provides centralized visibility and management of BitSwan deployments.  
+
+- Define and specify **processes**  
+- Manage and monitor **automations**  
+- Administer **automation servers** and **workspaces**  
+- Control **user access and roles**  
+
+When connected, Automation Servers and their workspaces continuously send information about deployed automations to the AOC.  
+
+![AOC](/assets/bitswan-aoc.png)
+
+## BitSwan Library
+
+The **BitSwan Python library** is the foundation for building automations and microservices.  
+
+- Includes reusable and configurable components for common integrations such as:  
+  - Apache Kafka  
+  - Elasticsearch  
+  - Webhooks  
+  - … (extendable with custom components)  
+- Provides the **BitSwan compiler** that transforms Jupyter Notebooks into production-ready Python code
+
+## How to Start
+
+BitSwan supports several deployment models to fit different infrastructure needs.
+
+**Legend**
+<img src="/assets/legend.png" width="200" height="100" alt="Legend">
+
+### **Full Cloud**  
+
+Both AOC and Automation Server are fully managed by us
+
+![Full Cloud BitSwan Platform Deployment](/assets/bitswan-full-cloud.png)  
+
+### **Hybrid**  
+
+AOC is managed by us, while the Automation Server runs in your infrastructure  
+
+![Hybrid BitSwan Platform Deployment](/assets/bitswan-hybrid.png)
+
+### **On-Premise**  
+
+Both AOC and Automation Servers run entirely in your infrastructure
+
+![On-Prem BitSwan Platform Deployment](/assets/bitswan-on-prem.png)
+
+### First Steps
+Set up your environment using the [**BitSwan Automation Server CLI**](https://github.com/bitswan-space/bitswan-automation-server)
+
+---
+
+## Repositories
+
+- [**bitswan (open source)**](https://github.com/bitswan-space/bitswan) – Python library for developing automations and microservices in Jupyter  
+- [**bitswan-automation-server (open source)**](https://github.com/bitswan-space/bitswan-automation-server) – Orchestration system for running Automation Servers and managing workspaces/runspaces  
+- [**bitswan-editor (mostly open source)**](https://github.com/bitswan-space/bitswan-editor) – Customized VS Code server tailored for BitSwan development and automation management  
+- [**bitswan-gitops**](https://github.com/bitswan-space/bitswan-gitops) – GitOps-based orchestration system for deploying and managing automations inside workspaces  
+- [**automation-operation-center (proprietary)**](https://github.com/bitswan-space/automation-operation-center) – Web application for process specification, monitoring, and management of BitSwan deployments  
