@@ -68,7 +68,8 @@ The **BitSwan Python library** is the foundation for building automations and mi
 BitSwan supports several deployment models to fit different infrastructure needs.
 
 **Legend**
-<img src="/assets/legend.png" width="200" height="100" alt="Legend">
+
+<img src="/assets/legend.png" width="400" height="300" alt="Legend">
 
 ### **Full Cloud**  
 
