@@ -69,7 +69,7 @@ BitSwan supports several deployment models to fit different infrastructure needs
 
 **Legend**
 
-<img src="/assets/legend.png" width="400" height="200" alt="Legend">
+<img src="/assets/legend.png" width="300" height="200" alt="Legend">
 
 ### **Full Cloud**  
 
