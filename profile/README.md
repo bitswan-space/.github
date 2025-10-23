@@ -79,8 +79,6 @@ BitSwan supports several deployment models to fit different infrastructure needs
 ### First Steps
 Set up your environment using the [**BitSwan Automation Server CLI**](https://github.com/bitswan-space/bitswan-automation-server)
 
----
-
 ## Repositories
 
 - [**bitswan (open source)**](https://github.com/bitswan-space/bitswan) – Python library for developing automations and microservices in Jupyter  
