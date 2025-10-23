@@ -67,27 +67,14 @@ The **BitSwan Python library** is the foundation for building automations and mi
 
 BitSwan supports several deployment models to fit different infrastructure needs.
 
-**Legend**
+- **Full Cloud**  
+   - Both AOC and Automation Server are fully managed by us
+- **Hybrid**  
+   - AOC is managed by us, while the Automation Server runs in your infrastructure  
+- **On-Premise**  
+   - Both AOC and Automation Servers run entirely in your infrastructure
 
-<img src="/assets/legend.png" width="300" height="200" alt="Legend">
-
-### **Full Cloud**  
-
-Both AOC and Automation Server are fully managed by us
-
-![Full Cloud BitSwan Platform Deployment](/assets/bitswan-full-cloud.png)  
-
-### **Hybrid**  
-
-AOC is managed by us, while the Automation Server runs in your infrastructure  
-
-![Hybrid BitSwan Platform Deployment](/assets/bitswan-hybrid.png)
-
-### **On-Premise**  
-
-Both AOC and Automation Servers run entirely in your infrastructure
-
-![On-Prem BitSwan Platform Deployment](/assets/bitswan-on-prem.png)
+![BitSwan Deployments](/assets/bitswan-deployments.png)
 
 ### First Steps
 Set up your environment using the [**BitSwan Automation Server CLI**](https://github.com/bitswan-space/bitswan-automation-server)
