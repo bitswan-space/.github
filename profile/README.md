@@ -21,6 +21,7 @@ The **Automation Server** is the runtime environment where BitSwan automations a
 
 Even when not connected to the AOC, the Automation Server runs 100% autonomously.  
 
+[Install automation server](https://deployment-management-external-frontend.bitswan-devops-1.bswn.io/)
 
 ## Workspace / Runspace
 
